@@ -1,7 +1,8 @@
-autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
-autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
-let &t_SI = "\e[5 q"
-let &t_EI = "\e[1 q"
+" this is only if you have a terminal that switches from block to line cursor
+" autocmd VimEnter * silent exec "! echo -ne '\e[1 q'"
+" autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
+" let &t_SI = "\e[5 q"
+" let &t_EI = "\e[1 q"
 
 if empty(glob('~/.vim/autoload/plug.vim'))
       silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs

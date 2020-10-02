@@ -3,16 +3,32 @@ autocmd VimLeave * silent exec "! echo -ne '\e[5 q'"
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[1 q"
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+      silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/vim-syntastic/syntastic'
-Plug 'https://github.com/ludovicchabant/vim-gutentags'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/vim-scripts/AutoComplPop'
+Plug 'https://github.com/rust-lang/rust.vim'
+Plug 'https://github.com/unblevable/quick-scope'
 call plug#end()
 
 " indent based on filetype
 filetype indent plugin on
 set autoindent
+
+" autocomplete
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
+
+" quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " persistant undo
 set undofile

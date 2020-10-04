@@ -5,10 +5,10 @@
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
-## Wallpaper. Nitrogen just draws wallpaper, 
+## Wallpaper. Nitrogen just draws wallpaper,
 #sh ~/.fehbg &
 nitrogen --restore &
-## compositing. Required for shadows, transparency and stuff. 
+## compositing. Required for shadows, transparency and stuff.
 # Alter compton settings if using intel graphics
 GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
 if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
@@ -46,5 +46,8 @@ xcape -e 'Super_L=Super_L|Shift_L|space;Super_R=Super_R|Shift_R|z' &
 gnome-keyring-daemon &
 thunar --daemon &
 /usr/lib/mate-notification-daemon/mate-notification-daemon &
+## xob
+exec ~/.config/xob/pulse-volume-watcher.py | xob &
 ## Welcome message
 # sleep 1 && notify-send "Welcome to Manjaro-bspwm" "Press super + F1 to show keybindings" &
+

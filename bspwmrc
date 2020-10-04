@@ -1,5 +1,5 @@
 #! /bin/sh
-gap=1
+gap=0
 PANEL_HEIGHT=0
 export gap
 export PANEL_HEIGHT
@@ -24,7 +24,7 @@ bspc config remove_unplugged_monitors true
 #bspc config honor_size_hints true
 
 ##Color settings
-bspc config focused_border_color "#FC2425"
+bspc config focused_border_color "#1ABB9B"
 bspc config normal_border_color "#222D32"
 #"#000000"
 bspc config presel_feedback_color "#1ABB9B"
@@ -37,6 +37,8 @@ bspc config focus_follows_pointer true
 #Settings for manual splitting
 bspc config split_ratio         0.52
 
+bspc monitor eDP-1-1 -d i iii v vii ix
+bspc monitor HDMI-0 -d ii iv vi viii x
 #bspc monitor -d i ii iii iv v vi vii viii ix x
 #bspc monitor -d One Two Three Four Five Six Seven Eight Nine Ten
 #bspc monitor -d I II III IV V VI VII VIII IX X
@@ -47,6 +49,9 @@ bspc config split_ratio         0.52
 ###This creates and names desktops for multiple monitors.
 workspaces_multimonitor &
 
+bspc rule -r "*"
+
+bspc rule -a mpv state=fullscreen
 #bspc rule -a conky lower=on sticky=on
 bspc rule -a screenkey --unmanage
 bspc rule -a gcolor2 state=floating center=true

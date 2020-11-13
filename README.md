@@ -5,10 +5,13 @@ Other things to do:
   * setup wallpaper with nitrogen
   * edit .profile with defaults and these four lines:
 
-setxkbmap -option caps:swapescape \n
-sleep 2 \n
-./.screenlayout/<arandr_script>.sh \n
-nitrogen --restore \n
+setxkbmap -option caps:swapescape
+
+sleep 2
+
+./.screenlayout/<arandr_script>.sh
+
+nitrogen --restore
 
   * if you need to auto mount a drive:
   * create /mnt/ssd and find your external drive name

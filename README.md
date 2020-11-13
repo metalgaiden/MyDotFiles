@@ -17,5 +17,6 @@ nitrogen --restore
   * create /mnt/ssd and find your external drive name
   * add this line to FSTAB (careful here, know how to boot to terminal in case)
   
-/dev/<drive_name> /mnt/ssd ntfs defaults,nls=utf8,umask=000,dmask=027,fmask=137,uid=1000,gid=1000,windows_names 0 0
+/dev/<drive_name> /mnt/ssd ntfs-3g defaults,x-gvfs-show    0   0
+
   

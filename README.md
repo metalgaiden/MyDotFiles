@@ -19,4 +19,6 @@ nitrogen --restore
   
 /dev/<drive_name> /mnt/ssd ntfs-3g defaults,x-gvfs-show    0   0
 
-  
+after pulseaudio is installed change the i3 config commented lines
+set the volume to 0 and run:
+sudo alsactl store

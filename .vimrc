@@ -14,7 +14,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/vim-scripts/AutoComplPop'
+Plug 'https://github.com/ervandew/supertab'
 Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/unblevable/quick-scope'
 call plug#end()
@@ -22,11 +22,6 @@ call plug#end()
 " indent based on filetype
 filetype indent plugin on
 set autoindent
-
-" autocomplete
-set complete+=kspell
-set completeopt=menuone,longest
-set shortmess+=c
 
 " quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']

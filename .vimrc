@@ -27,6 +27,9 @@ set autoindent
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " persistant undo
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "p")
+endif
 set undofile
 set undodir=~/.vim/undodir
 

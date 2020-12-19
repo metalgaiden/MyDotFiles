@@ -19,6 +19,9 @@ nitrogen --restore
   
 /dev/<drive_name> /mnt/ssd ntfs-3g defaults,x-gvfs-show    0   0
 
+for steam support make a compatdata folder in steamapps, delete the one from the ssd and run:
+$ ln -s ~/.steam/steam/steamapps/compatdata /mnt/ssd/<steam_directory>/steamapps/
+
 after pulseaudio is installed change the i3 config commented lines
 set the volume to 0 and run:
 sudo alsactl store

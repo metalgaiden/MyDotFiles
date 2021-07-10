@@ -15,14 +15,8 @@ Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/ervandew/supertab'
-Plug 'https://github.com/rust-lang/rust.vim'
 Plug 'https://github.com/unblevable/quick-scope'
 call plug#end()
-
-" home row movement
-noremap l h
-noremap ; l
-noremap h ; 
 
 " indent based on filetype
 filetype indent plugin on
